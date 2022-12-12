@@ -1,0 +1,10 @@
+*
+!Makefile
+!*.*
+!*/
+*.so
+*.dylib
+*.a
+*.o
+*/**/lib/*
+.cache/*/**
