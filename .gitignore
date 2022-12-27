@@ -8,3 +8,4 @@
 *.o
 */**/lib/*
 .cache/*/**
+compile_commands.json

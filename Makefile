@@ -1,6 +1,6 @@
 # Compiler flags
 CC      := clang
-CFLAGS := -Wall -Werror -Wextra -Iinc
+CFLAGS := -g -O0 -Wall -Werror -Wextra -Iinc
 LFLAGS := -Llib -laoc
 
 # Directories
@@ -33,10 +33,10 @@ lib/libaoc.dylib : $(LIBOBJ)
 	$(CC) -shared -Wl,-install_name,'@rpath/lib/libaoc.dylib' $< -o lib/libaoc.dylib
 solutions : $(BINLIST)
 $(LIBOBJ) : $(OBJDIR)/%.o : $(SRCDIR)/%.c
-	$(CC) -c $(CFLAGS) -O3 $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 $(WORKLIST1) : %-1 : $(WORKOBJ)/%-1.o $(WORKARG)/%.txt
 $(WORKLIST0) : %-0 : $(WORKOBJ)/%-0.o $(WORKARG)/%.txt
 $(BINLIST) : $(WORKBIN)/% : $(WORKOBJ)/%.o
 	$(CC) $(CFLAGS) $(LFLAGS) -Wl,-rpath,'@executable_path/../..' $< -o $@
 $(WORKOBJLIST) : $(WORKOBJ)/%.o : $(WORKSRC)/%.c
-	$(CC) -c $(CFLAGS) -O3 $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@

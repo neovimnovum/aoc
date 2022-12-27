@@ -3,68 +3,18 @@
     "arguments": [
       "/usr/bin/clang",
       "-c",
+      "-g",
+      "-O0",
       "-Wall",
       "-Werror",
       "-Wextra",
       "-Iinc",
-      "-O3",
       "-o",
-      "obj/input_f2intbuf.o",
-      "src/input_f2intbuf.c"
+      "solutions/obj/22-4-1.o",
+      "solutions/src/22-4-1.c"
     ],
     "directory": "/Users/josephtorsella/projects/aoc",
-    "file": "/Users/josephtorsella/projects/aoc/src/input_f2intbuf.c",
-    "output": "/Users/josephtorsella/projects/aoc/obj/input_f2intbuf.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-Wall",
-      "-Werror",
-      "-Wextra",
-      "-Iinc",
-      "-O3",
-      "-o",
-      "solutions/obj/22-1-0.o",
-      "solutions/src/22-1-0.c"
-    ],
-    "directory": "/Users/josephtorsella/projects/aoc",
-    "file": "/Users/josephtorsella/projects/aoc/solutions/src/22-1-0.c",
-    "output": "/Users/josephtorsella/projects/aoc/solutions/obj/22-1-0.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-Wall",
-      "-Werror",
-      "-Wextra",
-      "-Iinc",
-      "-O3",
-      "-o",
-      "solutions/obj/22-1-1.o",
-      "solutions/src/22-1-1.c"
-    ],
-    "directory": "/Users/josephtorsella/projects/aoc",
-    "file": "/Users/josephtorsella/projects/aoc/solutions/src/22-1-1.c",
-    "output": "/Users/josephtorsella/projects/aoc/solutions/obj/22-1-1.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-Wall",
-      "-Werror",
-      "-Wextra",
-      "-Iinc",
-      "-O3",
-      "-o",
-      "solutions/obj/22-2-0.o",
-      "solutions/src/22-2-0.c"
-    ],
-    "directory": "/Users/josephtorsella/projects/aoc",
-    "file": "/Users/josephtorsella/projects/aoc/solutions/src/22-2-0.c",
-    "output": "/Users/josephtorsella/projects/aoc/solutions/obj/22-2-0.o"
+    "file": "/Users/josephtorsella/projects/aoc/solutions/src/22-4-1.c",
+    "output": "/Users/josephtorsella/projects/aoc/solutions/obj/22-4-1.o"
   }
 ]
