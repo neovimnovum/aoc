@@ -1,3 +1,6 @@
+#ifndef GETFILE_HPP_INCLUDED
+#define GETFILE_HPP_INCLUDED
+
 #include <filesystem>
 #include <iostream>
 #include <fstream>
@@ -57,3 +60,5 @@ static inline void file_to_ints(const char *fname, std::vector<int> &svec) {
     }
     return;
 }
+
+#endif

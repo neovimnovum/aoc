@@ -1,28 +1,8 @@
 #include <cstdlib>
 #include <unordered_map>
-#include "getfile.h"
+#include "getfile.hpp"
 
-class TrieNode
-{
-    private:
-        char val;
-        std::vector<std::reference_wrapper<TrieNode>> cvec();
 
-    public:
-        TrieNode(char v)
-        {
-            val = v;
-        }
-};
-
-class Trie
-{
-    public:
-        Trie(std::vector<std::string> &svec)
-        {
-
-        }
-};
 
 int main(int argc, char *argv[])
 {
