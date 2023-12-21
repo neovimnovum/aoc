@@ -1,4 +1,6 @@
+compile_commands.json
 input/
+.cache/
 build/
 .vscode/
 bin/

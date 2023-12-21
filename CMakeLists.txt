@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
 project(aoc, LANGUAGES CXX)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(day1 ${PROJECT_SOURCE_DIR}/src/day1.cpp)
-add_library(libaoc ${PROJECT_SOURCE_DIR}/src/Trie.cpp)
+add_library(aoc SHARED ${PROJECT_SOURCE_DIR}/src/Trie.cpp)
 include_directories(AFTER ${PROJECT_SOURCE_DIR}/inc)

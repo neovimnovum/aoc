@@ -1,6 +1,11 @@
+#ifndef LIBAOC_H_INCLUDED
+#define LIBAOC_H_INCLUDED
 #include <vector>
 #include <string>
-#include <memory>
+
+#define TERM_NODE 2
+#define REG_NODE 1
+#define NO_NODE 0
 
 using namespace std;
 
@@ -10,22 +15,27 @@ namespace libaoc
     {
     private:
         char val;
-        int_fast8_t pos;
         bool term;
-        vector<unique_ptr<TrieNode>> cvec;
+        int pos;
+        vector<TrieNode *> cvec;
     public:
         TrieNode(const char v, int_fast8_t p, bool t);
+        void set_next(char c, bool t);
+        TrieNode *get_next(char c);
+        bool is_term();
     };
 
     class Trie
     {
     private:
         TrieNode root;
-        TrieNode &cur;
+        TrieNode *cur;
     public:
         Trie(vector<string> &svec);
         void add_str(string s);
-        int get_next(char c);
+        int next(char c);
         void reset();
     };
 } // namespace libaoc
+
+#endif
